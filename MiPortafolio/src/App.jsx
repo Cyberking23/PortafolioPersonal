@@ -4,119 +4,213 @@ import './App.css';
 const App = () => {
   return (
     <div className="app-wrapper">
+      {/* NAVEGACIÓN TIPO PÍLDORA */}
+      <nav className="navbar">
+        <div className="logo">cm.</div>
+        <div className="nav-pill">
+          <a href="#home">Inicio</a>
+          <a href="#services">Servicios</a>
+          <a href="#projects">Proyectos</a> {/* <- NUEVO ENLACE */}
+          <a href="#about">Sobre mí</a>
+          <a href="#skills">Habilidades</a>
+        </div>
+        <button className="contact-btn">Hablemos</button>
+      </nav>
+
       <main className="main-content">
-        {/* ABOUT ME & PIXEL CAT */}
-        <section id="about" className="about-section">
-          <div className="about-text">
-            <h1 className="section-title">About Me</h1>
-            <p>
-              Soy un desarrollador web y estudiante de Ingeniería en Ciencias de la Computación apasionado por crear productos digitales escalables. Creo firmemente en el poder del código limpio y el diseño intuitivo para resolver problemas reales.
+        {/* HERO SECTION */}
+        <section id="home" className="hero-section">
+          <div className="hero-text">
+            <p className="hero-greeting">Soy Carlos Merino</p>
+            <h1 className="hero-title">Desarrollador Web<br/>& Estudiante de Ingeniería</h1>
+            <p className="hero-desc">
+              Fusionando la lógica del backend con interfaces limpias y responsivas para crear productos digitales que se ven increíbles y rinden sin problemas.
             </p>
-            <p>
-              Cuando no estoy programando o gestionando bases de datos, me encuentro explorando nuevas tecnologías de backend, optimizando servidores en Linux o aportando soluciones operativas eficientes. Siempre busco proyectos que me reten a crecer como futuro ingeniero.
-            </p>
+            <div className="hero-actions">
+              <button className="download-btn">Descargar CV</button>
+              <div className="social-links">
+                <a href="#linkedin" className="social-icon">in</a>
+                <a href="#github" className="social-icon">gh</a>
+              </div>
+            </div>
           </div>
-          <div className="about-graphic">
-            {/* SVG GATITO PIXEL ART SIMULADO */}
-            <svg width="180" height="180" viewBox="0 0 24 24" fill="#a855f7" xmlns="http://www.w3.org/2000/svg" className="pixel-cat">
-              <path d="M2 6h2v2h2v2h12V8h2V6h2v6h-2v2h2v6h-2v2H4v-2H2v-6h2v-2H2V6zm4 6h4v2H6v-2zm8 0h4v2h-4v-2z" />
-              <path d="M10 16h4v2h-4z" fill="#050505" />
-              <path d="M4 14h2v2H4v-2zm14 0h2v2h-2v-2z" />
-            </svg>
-            <div className="sparkles">
-              <span className="sparkle s1">✦</span>
-              <span className="sparkle s2">✖</span>
-              <span className="sparkle s3">✦</span>
+          <div className="hero-image-container">
+            <div className="image-placeholder">
+              <span>Tu Foto Aquí</span>
             </div>
           </div>
         </section>
 
-        {/* SKILLS & TECHNOLOGIES */}
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">Skills & Technologies</h2>
-          <div className="skills-container">
-            <div className="skill-box">
-              <h3>Frontend</h3>
-              <div className="skill-tags">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>React.js</span>
-                <span>Tailwind</span>
+        {/* SERVICIOS */}
+        <section id="services" className="section text-center">
+          <h2 className="section-title">Servicios & Áreas</h2>
+          <p className="section-subtitle">Soluciones tecnológicas escalables y eficientes</p>
+          
+          <div className="grid-4">
+            <div className="card">
+              <h3>Frontend Development</h3>
+              <p>Interfaces responsivas usando React, Tailwind y JS para un rendimiento confiable y consistente.</p>
+              <div className="card-tags">
+                <span className="pill">React.js</span>
+                <span className="pill">Tailwind CSS</span>
               </div>
             </div>
             
-            <div className="skill-box">
-              <h3>Backend</h3>
-              <div className="skill-tags">
-                <span>PHP</span>
-                <span>Node.js</span>
-                <span>Laravel</span>
-                <span>Express</span>
-                <span>Python</span>
+            <div className="card">
+              <h3>Backend & Lógica</h3>
+              <p>Desarrollo de módulos críticos, APIs y lógica de negocio para sistemas contables y ERP.</p>
+              <div className="card-tags">
+                <span className="pill">PHP / Laravel</span>
+                <span className="pill">Node.js</span>
               </div>
             </div>
 
-            <div className="skill-box">
-              <h3>Data & Tools</h3>
-              <div className="skill-tags">
-                <span>MySQL</span>
-                <span>NoSQL</span>
-                <span>Git/GitHub</span>
-                <span>Docker</span>
-                <span>Linux</span>
+            <div className="card">
+              <h3>Bases de Datos</h3>
+              <p>Administración, diseño y optimización de bases de datos relacionales en producción.</p>
+              <div className="card-tags">
+                <span className="pill">MySQL</span>
+                <span className="pill">NoSQL</span>
+              </div>
+            </div>
+
+            <div className="card">
+              <h3>Soporte & Servidores</h3>
+              <p>Mantenimiento de hardware/software, optimización en Linux y despliegue con Docker.</p>
+              <div className="card-tags">
+                <span className="pill">Linux</span>
+                <span className="pill">Docker</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* EXPERIENCE (TIMELINE) */}
-        <section id="experience" className="experience-section">
-          <h2 className="section-title">Experience & Education</h2>
-          
-          <div className="timeline">
-            {/* Item 1 */}
-            <div className="timeline-item">
-              <div className="timeline-year">
-                <span>2026</span>
+        {/* PROYECTOS DESTACADOS (NUEVA SECCIÓN) */}
+        <section id="projects" className="section">
+          <div className="text-center">
+            <h2 className="section-title">Proyectos Destacados</h2>
+            <p className="section-subtitle">Una selección de mi trabajo reciente y desarrollos técnicos</p>
+          </div>
+
+          <div className="projects-grid-modern">
+            {/* Proyecto 1 */}
+            <div className="project-modern-card">
+              <div className="project-img-placeholder">
+                <span>Captura del ERP / CRM</span>
               </div>
-              <div className="timeline-content">
-                <h3>Ingeniería en Ciencias de la Computación</h3>
-                <p className="highlight">Universidad Don Bosco</p>
-                <p>Estudiante activo en formación, desarrollando pensamiento crítico, arquitectura de software y administración de sistemas.</p>
+              <div className="project-modern-info">
+                <h3>Módulo ERP Contable & DTE</h3>
+                <p>Desarrollo e implementación de módulos críticos para el sistema financiero de Intersys. Lógica de negocio estructurada para la gestión de documentos tributarios electrónicos (DTE).</p>
+                <div className="project-modern-tags">
+                  <span className="pill">Laravel</span>
+                  <span className="pill">PHP</span>
+                  <span className="pill">MySQL</span>
+                </div>
               </div>
             </div>
 
-            {/* Item 2 */}
-            <div className="timeline-item">
-              <div className="timeline-year">
-                <span>2025</span>
+            {/* Proyecto 2 */}
+            <div className="project-modern-card">
+              <div className="project-img-placeholder">
+                <span>Captura de Datos/Dashboard</span>
               </div>
-              <div className="timeline-content">
-                <h3>Desarrollador de Software</h3>
-                <p className="highlight">Intersys | Profinancial SV</p>
-                <p>Implementación de módulos críticos para sistemas ERP con Laravel y DTE. Desarrollo de lógica de negocio para sistemas CRM contables en PHP, junto con administración de bases de datos MySQL en producción y diseño de interfaces con Tailwind CSS.</p>
+              <div className="project-modern-info">
+                <h3>Sistema de Análisis Académico</h3>
+                <p>Herramienta basada en datos para procesar históricos y hacer ingeniería inversa de horarios universitarios, permitiendo predecir la asignación de docentes basada en patrones.</p>
+                <div className="project-modern-tags">
+                  <span className="pill">Data Analysis</span>
+                  <span className="pill">Algoritmos</span>
+                  <span className="pill">Backend</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SOBRE MÍ & ENFOQUE */}
+        <section id="about" className="section text-center">
+          <h2 className="section-title">Sobre Mí</h2>
+          <p className="about-desc">
+            Soy un estudiante de Ingeniería en Ciencias de la Computación apasionado por crear experiencias digitales limpias. Me enfoco en convertir ideas en sistemas funcionales entendiendo las necesidades operativas y asegurando interacciones fluidas en cualquier dispositivo.
+          </p>
+
+          <h3 className="subsection-title">Mi Enfoque</h3>
+          <div className="grid-3">
+            <div className="approach-card">
+              <span className="approach-num">01</span>
+              <span>Análisis de Requerimientos</span>
+            </div>
+            <div className="approach-card">
+              <span className="approach-num">02</span>
+              <span>Desarrollo de Lógica Clara</span>
+            </div>
+            <div className="approach-card">
+              <span className="approach-num">03</span>
+              <span>Implementación Escalable</span>
+            </div>
+          </div>
+
+          <div className="stats-container">
+            <div className="stat">
+              <h4>3+</h4>
+              <p>Años de Experiencia</p>
+            </div>
+            <div className="stat">
+              <h4>10+</h4>
+              <p>Proyectos Creados</p>
+            </div>
+            <div className="stat">
+              <h4>100%</h4>
+              <p>Compromiso</p>
+            </div>
+          </div>
+        </section>
+
+        {/* HABILIDADES */}
+        <section id="skills" className="section text-center">
+          <h2 className="section-title">Habilidades</h2>
+          <p className="section-subtitle">Herramientas y tecnologías que domino</p>
+
+          <div className="grid-4">
+            <div className="card">
+              <h3>Core Skills</h3>
+              <div className="skills-tags">
+                <span className="skill-pill">Arquitectura Web</span>
+                <span className="skill-pill">Resolución de Problemas</span>
+                <span className="skill-pill">Soporte Técnico</span>
               </div>
             </div>
 
-            {/* Item 3 */}
-            <div className="timeline-item">
-              <div className="timeline-year">
-                <span>2024</span>
+            <div className="card">
+              <h3>Frontend</h3>
+              <div className="skills-tags">
+                <span className="skill-pill">HTML & CSS</span>
+                <span className="skill-pill">JavaScript</span>
+                <span className="skill-pill">React.js</span>
+                <span className="skill-pill">Tailwind CSS</span>
               </div>
-              <div className="timeline-content">
-                <h3>Soporte Técnico</h3>
-                <p className="highlight">Colegio Don Bosco</p>
-                <p>Mantenimiento preventivo y correctivo de hardware/software, diagnóstico de fallas, instalación de sistemas operativos y resolución de incidentes técnicos para garantizar la operatividad.</p>
+            </div>
+
+            <div className="card">
+              <h3>Backend & BD</h3>
+              <div className="skills-tags">
+                <span className="skill-pill">PHP & Laravel</span>
+                <span className="skill-pill">Node.js</span>
+                <span className="skill-pill">MySQL</span>
+              </div>
+            </div>
+
+            <div className="card">
+              <h3>Herramientas</h3>
+              <div className="skills-tags">
+                <span className="skill-pill">Git / GitHub</span>
+                <span className="skill-pill">Linux</span>
+                <span className="skill-pill">Docker</span>
               </div>
             </div>
           </div>
         </section>
       </main>
-      
-      <footer className="footer">
-        <p>© 2026 Carlos Merino. Desarrollador Web.</p>
-      </footer>
     </div>
   );
 };
