@@ -9,21 +9,23 @@
   outline: none !important;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   width: 100%;
   min-height: 100vh;
-  background-color: #050505; /* Negro profundo casi puro */
-  color: #e5e5e5; /* Texto blanco suave */
+  background-color: #050505;
+  color: #e5e5e5;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden; /* Evita scroll horizontal por error */
+  overflow-x: hidden;
 }
 
 /* CONTENEDOR PRINCIPAL */
 .app-wrapper {
   width: 100%;
-  max-width: 1200px; /* Ancho máximo para monitores grandes */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
 }
@@ -50,7 +52,7 @@ html, body, #root {
 
 .nav-pill {
   background-color: #111;
-  border: 1px solid #222 !important; /* Excepción borde suave */
+  border: 1px solid #222 !important;
   padding: 10px 30px;
   border-radius: 50px;
   display: flex;
@@ -69,7 +71,8 @@ html, body, #root {
   color: #fff;
 }
 
-.contact-btn, .download-btn {
+.contact-btn,
+.download-btn {
   background-color: #222;
   color: #fff;
   padding: 10px 24px;
@@ -79,7 +82,8 @@ html, body, #root {
   transition: background 0.3s;
 }
 
-.contact-btn:hover, .download-btn:hover {
+.contact-btn:hover,
+.download-btn:hover {
   background-color: #333;
 }
 
@@ -110,14 +114,14 @@ html, body, #root {
 /* --- GRID SYSTEM (La clave para poner cosas lado a lado) --- */
 .grid-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales en PC */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
 }
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
   margin-bottom: 50px;
@@ -216,17 +220,19 @@ html, body, #root {
   color: #888;
   font-size: 14px;
   margin-bottom: 30px;
-  flex-grow: 1; /* Empuja los tags hacia abajo */
+  flex-grow: 1;
 }
 
 /* Etiquetas tipo píldora dentro de las tarjetas */
-.card-tags, .skills-tags {
+.card-tags,
+.skills-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.pill, .skill-pill {
+.pill,
+.skill-pill {
   background-color: #1a1a1a;
   border: 1px solid #2a2a2a !important;
   color: #aaa;
@@ -255,7 +261,8 @@ html, body, #root {
 
 .approach-card {
   background-color: #111;
-  border-radius: 50px; /* Forma de píldora larga */
+  border-radius: 50px;
+  /* Forma de píldora larga */
   padding: 12px 24px;
   display: flex;
   align-items: center;
@@ -297,7 +304,7 @@ html, body, #root {
 /* --- PROYECTOS (NUEVA SECCIÓN) --- */
 .projects-grid-modern {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas grandes en PC */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   width: 100%;
 }
@@ -306,14 +313,14 @@ html, body, #root {
   background-color: #111;
   border: 1px solid #1a1a1a !important;
   border-radius: 16px;
-  overflow: hidden; /* Evita que la imagen se salga de los bordes redondeados */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, border-color 0.3s;
 }
 
 .project-modern-card:hover {
-  transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el mouse */
+  transform: translateY(-5px);
   border-color: #333 !important;
 }
 
@@ -367,35 +374,54 @@ html, body, #root {
 /* --- RESPONSIVE PARA PROYECTOS --- */
 @media (max-width: 850px) {
   .projects-grid-modern {
-    grid-template-columns: 1fr; /* 1 sola columna en dispositivos móviles */
+    grid-template-columns: 1fr;
   }
-  
+
   .project-img-placeholder {
-    height: 200px; /* Un poco más pequeña la imagen en celulares */
+    height: 200px;
   }
 }
 
 
 /* --- RESPONSIVE (MÓVILES Y TABLETS) --- */
 @media (max-width: 1024px) {
-  .grid-4 { grid-template-columns: repeat(2, 1fr); } /* 2 columnas en tablets */
-  .hero-title { font-size: 40px; }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 768px) {
-  .nav-pill { display: none; } /* Oculta el menú central en móvil por espacio */
-  
+  .nav-pill {
+    display: none;
+  }
+
   .hero-section {
     flex-direction: column;
     text-align: center;
   }
-  
-  .hero-text { margin-bottom: 30px; }
-  .hero-actions { justify-content: center; }
-  .hero-image-container { flex: 0 0 auto; width: 100%; }
-  
-  .grid-4, .grid-3 { grid-template-columns: 1fr; } /* 1 sola columna en móviles */
-  
+
+  .hero-text {
+    margin-bottom: 30px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
   .stats-container {
     flex-direction: column;
     gap: 30px;

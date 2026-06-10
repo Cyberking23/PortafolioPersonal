@@ -4,13 +4,12 @@ import './App.css';
 const App = () => {
   return (
     <div className="app-wrapper">
-      {/* NAVEGACIÓN TIPO PÍLDORA */}
       <nav className="navbar">
         <div className="logo">cm.</div>
         <div className="nav-pill">
           <a href="#home">Inicio</a>
           <a href="#services">Servicios</a>
-          <a href="#projects">Proyectos</a> {/* <- NUEVO ENLACE */}
+          <a href="#projects">Proyectos</a> 
           <a href="#about">Sobre mí</a>
           <a href="#skills">Habilidades</a>
         </div>
@@ -18,7 +17,6 @@ const App = () => {
       </nav>
 
       <main className="main-content">
-        {/* HERO SECTION */}
         <section id="home" className="hero-section">
           <div className="hero-text">
             <p className="hero-greeting">Soy Carlos Merino</p>
@@ -41,7 +39,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* SERVICIOS */}
         <section id="services" className="section text-center">
           <h2 className="section-title">Servicios & Áreas</h2>
           <p className="section-subtitle">Soluciones tecnológicas escalables y eficientes</p>
@@ -85,7 +82,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* PROYECTOS DESTACADOS (NUEVA SECCIÓN) */}
         <section id="projects" className="section">
           <div className="text-center">
             <h2 className="section-title">Proyectos Destacados</h2>
@@ -93,7 +89,6 @@ const App = () => {
           </div>
 
           <div className="projects-grid-modern">
-            {/* Proyecto 1 */}
             <div className="project-modern-card">
               <div className="project-img-placeholder">
                 <span>Captura del ERP / CRM</span>
@@ -109,7 +104,6 @@ const App = () => {
               </div>
             </div>
 
-            {/* Proyecto 2 */}
             <div className="project-modern-card">
               <div className="project-img-placeholder">
                 <span>Captura de Datos/Dashboard</span>
@@ -127,7 +121,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* SOBRE MÍ & ENFOQUE */}
         <section id="about" className="section text-center">
           <h2 className="section-title">Sobre Mí</h2>
           <p className="about-desc">
@@ -166,7 +159,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* HABILIDADES */}
         <section id="skills" className="section text-center">
           <h2 className="section-title">Habilidades</h2>
           <p className="section-subtitle">Herramientas y tecnologías que domino</p>
