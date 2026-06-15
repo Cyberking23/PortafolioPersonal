@@ -1,208 +1,143 @@
 import React from 'react';
 import './App.css';
+import { CarruselProyectos } from './Components/CarruselProyectos';
+import { Certificaciones } from './Components/Certificaciones';
 
 const App = () => {
   return (
-    <div className="app-wrapper">
-      <nav className="navbar">
-        <div className="logo">cm.</div>
-        <div className="nav-pill">
-          <a href="#home">Inicio</a>
-          <a href="#services">Servicios</a>
-          <a href="#projects">Proyectos</a> 
-          <a href="#about">Sobre mí</a>
-          <a href="#skills">Habilidades</a>
-        </div>
-        <button className="contact-btn">Hablemos</button>
-      </nav>
+    <div className="min-h-screen bg-black text-[#e5e5e5] font-sans antialiased overflow-x-hidden">
+      <div className="w-full max-w-[1200px] mx-auto px-[5%]">
+        
+        <nav className="flex justify-between items-center py-[30px]">
+          <div className="font-semibold bg-[#222] w-[45px] h-[45px] flex items-center justify-center rounded-full">
+            CM
+          </div>
+          <div className="hidden md:flex bg-[#111] border border-[#222] py-[10px] px-[30px] rounded-full gap-[30px]">
+            <a href="#home" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Inicio</a>
+            <a href="#services" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Servicios</a>
+            <a href="#projects" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Proyectos</a>
+            <a href="#about" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Sobre mí</a>
+            <a href="#skills" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Habilidades</a>
+            <a href="#certifications" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Certificaciones</a>
+          </div>
+        </nav>
 
-      <main className="main-content">
-        <section id="home" className="hero-section">
-          <div className="hero-text">
-            <p className="hero-greeting">Soy Carlos Merino</p>
-            <h1 className="hero-title">Desarrollador Web<br/>& Estudiante de Ingeniería</h1>
-            <p className="hero-desc">
-              Fusionando la lógica del backend con interfaces limpias y responsivas para crear productos digitales que se ven increíbles y rinden sin problemas.
-            </p>
-            <div className="hero-actions">
-              <button className="download-btn">Descargar CV</button>
-              <div className="social-links">
-                <a href="#linkedin" className="social-icon">in</a>
-                <a href="#github" className="social-icon">gh</a>
+        <main>
+          <section id="home" className="flex flex-col md:flex-row items-center justify-between py-[60px] gap-[40px] text-center md:text-left">
+            <div className="flex-1 max-w-[600px] mb-[30px] md:mb-0">
+              <p className="text-[#888] text-[16px] mb-[12px]">Soy Carlos Merino</p>
+              <h1 className="text-[40px] lg:text-[52px] leading-[1.1] font-bold mb-[24px]">Desarrollador Web<br />& Estudiante de Ingeniería</h1>
+              <p className="text-[#aaa] text-[16px] mb-[40px] max-w-[90%] mx-auto md:mx-0">
+                Fusionando la lógica del backend con interfaces limpias y responsivas para crear productos digitales que se ven increíbles y rinden sin problemas.
+              </p>
+              <div className="flex justify-center md:justify-start items-center gap-[20px]">
+                <a href="/Docs/CV.pdf" download="CV_TuNombre.pdf" className="bg-[#222] text-white py-[10px] px-[24px] rounded-lg font-medium transition-colors duration-300 hover:bg-[#333]">
+                  Descargar CV
+                </a>
+                <div className="flex gap-[15px]">
+                  <a href="https://github.com/Cyberking23" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[8px] no-underline text-[#aaa] transition-colors duration-300 hover:text-white">
+                    <img src="/Img/GithubWhite.svg" alt="Github" className="w-[30px] h-[30px]" />
+                    Github
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="hero-image-container">
-            <div className="image-placeholder">
-              <span>Tu Foto Aquí</span>
+            <div className="flex-none w-full md:w-[400px]">
+              <div className="w-full h-[450px] bg-[#111] rounded-[24px] flex items-center justify-center text-[#444]">
+                <span>Tu Foto Aquí</span>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="services" className="section text-center">
-          <h2 className="section-title">Servicios & Áreas</h2>
-          <p className="section-subtitle">Soluciones tecnológicas escalables y eficientes</p>
+          <CarruselProyectos/>
           
-          <div className="grid-4">
-            <div className="card">
-              <h3>Frontend Development</h3>
-              <p>Interfaces responsivas usando React, Tailwind y JS para un rendimiento confiable y consistente.</p>
-              <div className="card-tags">
-                <span className="pill">React.js</span>
-                <span className="pill">Tailwind CSS</span>
-              </div>
-            </div>
-            
-            <div className="card">
-              <h3>Backend & Lógica</h3>
-              <p>Desarrollo de módulos críticos, APIs y lógica de negocio para sistemas contables y ERP.</p>
-              <div className="card-tags">
-                <span className="pill">PHP / Laravel</span>
-                <span className="pill">Node.js</span>
-              </div>
-            </div>
 
-            <div className="card">
-              <h3>Bases de Datos</h3>
-              <p>Administración, diseño y optimización de bases de datos relacionales en producción.</p>
-              <div className="card-tags">
-                <span className="pill">MySQL</span>
-                <span className="pill">NoSQL</span>
+          <section id="about" className="py-[80px] flex flex-col items-center text-center">
+            <h2 className="text-[32px] font-semibold mb-[8px]">Sobre Mí</h2>
+            <p className="text-[#aaa] max-w-[800px] mb-[40px] text-[15px]">
+              Soy un estudiante de Ingeniería en Ciencias de la Computación apasionado por crear experiencias digitales limpias. Me enfoco en convertir ideas en sistemas funcionales entendiendo las necesidades operativas y asegurando interacciones fluidas en cualquier dispositivo.
+            </p>
+
+            <h3 className="text-[18px] mb-[24px] text-white">Mi Enfoque</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px] w-full mb-[50px]">
+              <div className="bg-[#111] rounded-full py-[12px] px-[24px] flex items-center gap-[16px]">
+                <span className="bg-[#ddd] text-black w-[30px] h-[30px] flex items-center justify-center rounded-full text-[12px] font-bold">01</span>
+                <span>Análisis de Requerimientos</span>
+              </div>
+              <div className="bg-[#111] rounded-full py-[12px] px-[24px] flex items-center gap-[16px]">
+                <span className="bg-[#ddd] text-black w-[30px] h-[30px] flex items-center justify-center rounded-full text-[12px] font-bold">02</span>
+                <span>Desarrollo de Lógica Clara</span>
+              </div>
+              <div className="bg-[#111] rounded-full py-[12px] px-[24px] flex items-center gap-[16px]">
+                <span className="bg-[#ddd] text-black w-[30px] h-[30px] flex items-center justify-center rounded-full text-[12px] font-bold">03</span>
+                <span>Implementación Escalable</span>
               </div>
             </div>
 
-            <div className="card">
-              <h3>Soporte & Servidores</h3>
-              <p>Mantenimiento de hardware/software, optimización en Linux y despliegue con Docker.</p>
-              <div className="card-tags">
-                <span className="pill">Linux</span>
-                <span className="pill">Docker</span>
+            <div className="flex flex-col md:flex-row justify-center gap-[30px] md:gap-[80px] mt-[20px]">
+              <div>
+                <h4 className="text-[40px] font-bold mb-[4px]">2+</h4>
+                <p className="text-[#888] text-[14px]">Años de Experiencia</p>
+              </div>
+              <div>
+                <h4 className="text-[40px] font-bold mb-[4px]">10+</h4>
+                <p className="text-[#888] text-[14px]">Proyectos Creados</p>
+              </div>
+              <div>
+                <h4 className="text-[40px] font-bold mb-[4px]">100%</h4>
+                <p className="text-[#888] text-[14px]">Compromiso</p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="projects" className="section">
-          <div className="text-center">
-            <h2 className="section-title">Proyectos Destacados</h2>
-            <p className="section-subtitle">Una selección de mi trabajo reciente y desarrollos técnicos</p>
-          </div>
+          <Certificaciones />
 
-          <div className="projects-grid-modern">
-            <div className="project-modern-card">
-              <div className="project-img-placeholder">
-                <span>Captura del ERP / CRM</span>
+
+          <section id="skills" className="py-[80px] flex flex-col items-center text-center">
+            <h2 className="text-[32px] font-semibold mb-[8px]">Habilidades</h2>
+            <p className="text-[#888] text-[14px] mb-[50px]">Herramientas y tecnologías que domino</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] w-full">
+              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
+                <h3 className="text-[18px] mb-[16px] font-semibold">Core Skills</h3>
+                <div className="flex flex-wrap gap-[10px]">
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Arquitectura Web</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Resolución de Problemas</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Soporte Técnico</span>
+                </div>
               </div>
-              <div className="project-modern-info">
-                <h3>Módulo ERP Contable & DTE</h3>
-                <p>Desarrollo e implementación de módulos críticos para el sistema financiero de Intersys. Lógica de negocio estructurada para la gestión de documentos tributarios electrónicos (DTE).</p>
-                <div className="project-modern-tags">
-                  <span className="pill">Laravel</span>
-                  <span className="pill">PHP</span>
-                  <span className="pill">MySQL</span>
+
+              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
+                <h3 className="text-[18px] mb-[16px] font-semibold">Frontend</h3>
+                <div className="flex flex-wrap gap-[10px]">
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">HTML & CSS</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">JavaScript</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">React.js</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Tailwind CSS</span>
+                </div>
+              </div>
+
+              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
+                <h3 className="text-[18px] mb-[16px] font-semibold">Backend & BD</h3>
+                <div className="flex flex-wrap gap-[10px]">
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">PHP & Laravel</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Node.js</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">MySQL</span>
+                </div>
+              </div>
+
+              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
+                <h3 className="text-[18px] mb-[16px] font-semibold">Herramientas</h3>
+                <div className="flex flex-wrap gap-[10px]">
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Git / GitHub</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Linux</span>
+                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Docker</span>
                 </div>
               </div>
             </div>
-
-            <div className="project-modern-card">
-              <div className="project-img-placeholder">
-                <span>Captura de Datos/Dashboard</span>
-              </div>
-              <div className="project-modern-info">
-                <h3>Sistema de Análisis Académico</h3>
-                <p>Herramienta basada en datos para procesar históricos y hacer ingeniería inversa de horarios universitarios, permitiendo predecir la asignación de docentes basada en patrones.</p>
-                <div className="project-modern-tags">
-                  <span className="pill">Data Analysis</span>
-                  <span className="pill">Algoritmos</span>
-                  <span className="pill">Backend</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="section text-center">
-          <h2 className="section-title">Sobre Mí</h2>
-          <p className="about-desc">
-            Soy un estudiante de Ingeniería en Ciencias de la Computación apasionado por crear experiencias digitales limpias. Me enfoco en convertir ideas en sistemas funcionales entendiendo las necesidades operativas y asegurando interacciones fluidas en cualquier dispositivo.
-          </p>
-
-          <h3 className="subsection-title">Mi Enfoque</h3>
-          <div className="grid-3">
-            <div className="approach-card">
-              <span className="approach-num">01</span>
-              <span>Análisis de Requerimientos</span>
-            </div>
-            <div className="approach-card">
-              <span className="approach-num">02</span>
-              <span>Desarrollo de Lógica Clara</span>
-            </div>
-            <div className="approach-card">
-              <span className="approach-num">03</span>
-              <span>Implementación Escalable</span>
-            </div>
-          </div>
-
-          <div className="stats-container">
-            <div className="stat">
-              <h4>3+</h4>
-              <p>Años de Experiencia</p>
-            </div>
-            <div className="stat">
-              <h4>10+</h4>
-              <p>Proyectos Creados</p>
-            </div>
-            <div className="stat">
-              <h4>100%</h4>
-              <p>Compromiso</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills" className="section text-center">
-          <h2 className="section-title">Habilidades</h2>
-          <p className="section-subtitle">Herramientas y tecnologías que domino</p>
-
-          <div className="grid-4">
-            <div className="card">
-              <h3>Core Skills</h3>
-              <div className="skills-tags">
-                <span className="skill-pill">Arquitectura Web</span>
-                <span className="skill-pill">Resolución de Problemas</span>
-                <span className="skill-pill">Soporte Técnico</span>
-              </div>
-            </div>
-
-            <div className="card">
-              <h3>Frontend</h3>
-              <div className="skills-tags">
-                <span className="skill-pill">HTML & CSS</span>
-                <span className="skill-pill">JavaScript</span>
-                <span className="skill-pill">React.js</span>
-                <span className="skill-pill">Tailwind CSS</span>
-              </div>
-            </div>
-
-            <div className="card">
-              <h3>Backend & BD</h3>
-              <div className="skills-tags">
-                <span className="skill-pill">PHP & Laravel</span>
-                <span className="skill-pill">Node.js</span>
-                <span className="skill-pill">MySQL</span>
-              </div>
-            </div>
-
-            <div className="card">
-              <h3>Herramientas</h3>
-              <div className="skills-tags">
-                <span className="skill-pill">Git / GitHub</span>
-                <span className="skill-pill">Linux</span>
-                <span className="skill-pill">Docker</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </div>
     </div>
   );
 };
