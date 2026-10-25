@@ -6,9 +6,9 @@ import { Certificaciones } from './Components/Certificaciones';
 const App = () => {
   return (
     <div className="min-h-screen bg-black text-[#e5e5e5] font-sans antialiased overflow-x-hidden">
-      <div className="w-full max-w-[1200px] mx-auto px-[5%]">
+      <div className="w-full">
         
-        <nav className="flex justify-between items-center py-[30px]">
+        <nav className="flex justify-between items-center py-[30px] px-[5%]">
           <div className="font-semibold bg-[#222] w-[45px] h-[45px] flex items-center justify-center rounded-full">
             CM
           </div>
@@ -22,7 +22,7 @@ const App = () => {
           </div>
         </nav>
 
-        <main>
+        <main className="px-[5%]"> {/* Aplicamos el padding aquí para todo el contenido */}
           <section id="home" className="flex flex-col md:flex-row items-center justify-between py-[60px] gap-[40px] text-center md:text-left">
             <div className="flex-1 max-w-[600px] mb-[30px] md:mb-0">
               <p className="text-[#888] text-[16px] mb-[12px]">Soy Carlos Merino</p>
@@ -91,7 +91,6 @@ const App = () => {
           </section>
 
           <Certificaciones />
-
 
           <section id="skills" className="py-[80px] flex flex-col items-center text-center">
             <h2 className="text-[32px] font-semibold mb-[8px]">Habilidades</h2>
