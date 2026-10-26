@@ -1,0 +1,11 @@
+services:
+  portafolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mi-portafolio:latest
+    container_name: mi-portafolio-container
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
