@@ -1,142 +1,174 @@
-import React from 'react';
-import './App.css';
 import { CarruselProyectos } from './Components/CarruselProyectos';
 import { Certificaciones } from './Components/Certificaciones';
-
+import './App.css';
 const App = () => {
   return (
-    <div className="min-h-screen bg-black text-[#e5e5e5] font-sans antialiased overflow-x-hidden">
-      <div className="w-full">
-        
-        <nav className="flex justify-between items-center py-[30px] px-[5%]">
-          <div className="font-semibold bg-[#222] w-[45px] h-[45px] flex items-center justify-center rounded-full">
-            CM
+    <div className="min-h-screen bg-[#050b14] text-slate-300 font-sans antialiased selection:bg-blue-500/30 selection:text-white">
+
+      <div className="pt-6 px-4 md:px-8 w-full max-w-[1400px] mx-auto">
+        <nav className="flex justify-between items-center bg-[#0e1629] border border-slate-800 rounded-full px-6 py-3 shadow-lg">
+          <div className="font-bold text-white text-sm tracking-wide flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></div>
+            Carlos Merino
           </div>
-          <div className="hidden md:flex bg-[#111] border border-[#222] py-[10px] px-[30px] rounded-full gap-[30px]">
-            <a href="#home" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Inicio</a>
-            <a href="#services" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Servicios</a>
-            <a href="#projects" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Proyectos</a>
-            <a href="#about" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Sobre mí</a>
-            <a href="#skills" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Habilidades</a>
-            <a href="#certifications" className="text-[#aaa] no-underline text-[14px] font-medium transition-colors duration-300 hover:text-white">Certificaciones</a>
+          <div className="hidden md:flex gap-8 text-[13px] font-medium text-slate-400">
+            <a href="#home" className="hover:text-white transition-colors">Inicio</a>
+            <a href="#projects" className="hover:text-white transition-colors">Proyectos</a>
+            <a href="#skills" className="hover:text-white transition-colors">Stack Técnico</a>
           </div>
+          <a href="mailto:merinoventura123@gmail.com" className="bg-white text-black font-semibold text-[13px] px-5 py-2 rounded-full hover:bg-slate-200 transition-colors flex items-center gap-2">
+            Contactar <span className="text-lg leading-none">→</span>
+          </a>
         </nav>
+      </div>
 
-        <main className="px-[5%]"> {/* Aplicamos el padding aquí para todo el contenido */}
-          <section id="home" className="flex flex-col md:flex-row items-center justify-between py-[60px] gap-[40px] text-center md:text-left">
-            <div className="flex-1 max-w-[600px] mb-[30px] md:mb-0">
-              <p className="text-[#888] text-[16px] mb-[12px]">Soy Carlos Merino</p>
-              <h1 className="text-[40px] lg:text-[52px] leading-[1.1] font-bold mb-[24px]">Desarrollador Web<br />& Estudiante de Ingeniería</h1>
-              <p className="text-[#aaa] text-[16px] mb-[40px] max-w-[90%] mx-auto md:mx-0">
-                Fusionando la lógica del backend con interfaces limpias y responsivas para crear productos digitales que se ven increíbles y rinden sin problemas.
-              </p>
-              <div className="flex justify-center md:justify-start items-center gap-[20px]">
-                <a href="/Docs/CV.pdf" download="CV_TuNombre.pdf" className="bg-[#222] text-white py-[10px] px-[24px] rounded-lg font-medium transition-colors duration-300 hover:bg-[#333]">
-                  Descargar CV
-                </a>
-                <div className="flex gap-[15px]">
-                  <a href="https://github.com/Cyberking23" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[8px] no-underline text-[#aaa] transition-colors duration-300 hover:text-white">
-                    <img src="/Img/GithubWhite.svg" alt="Github" className="w-[30px] h-[30px]" />
-                    Github
-                  </a>
-                </div>
-              </div>
+      <main className="max-w-[1400px] mx-auto px-4 md:px-8">
+
+        <section id="home" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[85vh] py-12">
+          <div className="flex flex-col items-start text-left">
+            <div className="border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-8 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Desarrollador de Software Jr.
             </div>
-            <div className="flex-none w-full md:w-[400px]">
-              <div className="w-full h-[450px] bg-[#111] rounded-[24px] flex items-center justify-center text-[#444]">
-                <span>Tu Foto Aquí</span>
-              </div>
-            </div>
-          </section>
 
-          <CarruselProyectos/>
-          
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-8">
+              Creando sistemas corporativos y <span className="text-blue-500">lógica escalable.</span>
+            </h1>
 
-          <section id="about" className="py-[80px] flex flex-col items-center text-center">
-            <h2 className="text-[32px] font-semibold mb-[8px]">Sobre Mí</h2>
-            <p className="text-[#aaa] max-w-[800px] mb-[40px] text-[15px]">
-              Soy un estudiante de Ingeniería en Ciencias de la Computación apasionado por crear experiencias digitales limpias. Me enfoco en convertir ideas en sistemas funcionales entendiendo las necesidades operativas y asegurando interacciones fluidas en cualquier dispositivo.
+            <p className="text-slate-400 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
+              Estudiante de Ingeniería en Ciencias de la Computación con experiencia en mantenimiento de sistemas, integración de APIs RESTful y gestión de bases de datos en producción.
             </p>
 
-            <h3 className="text-[18px] mb-[24px] text-white">Mi Enfoque</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px] w-full mb-[50px]">
-              <div className="bg-[#111] rounded-full py-[12px] px-[24px] flex items-center gap-[16px]">
-                <span className="bg-[#ddd] text-black w-[30px] h-[30px] flex items-center justify-center rounded-full text-[12px] font-bold">01</span>
-                <span>Análisis de Requerimientos</span>
-              </div>
-              <div className="bg-[#111] rounded-full py-[12px] px-[24px] flex items-center gap-[16px]">
-                <span className="bg-[#ddd] text-black w-[30px] h-[30px] flex items-center justify-center rounded-full text-[12px] font-bold">02</span>
-                <span>Desarrollo de Lógica Clara</span>
-              </div>
-              <div className="bg-[#111] rounded-full py-[12px] px-[24px] flex items-center gap-[16px]">
-                <span className="bg-[#ddd] text-black w-[30px] h-[30px] flex items-center justify-center rounded-full text-[12px] font-bold">03</span>
-                <span>Implementación Escalable</span>
-              </div>
+            <div className="flex flex-wrap items-center gap-4">
+              <a href="mailto:merinoventura123@gmail.com" className="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-500 transition-colors flex items-center gap-2">
+                Trabajemos juntos <span className="text-xl leading-none">→</span>
+              </a>
+              <a href="/Docs/CV.pdf" download className="bg-[#0e1629] border border-slate-700 text-white font-medium px-6 py-3 rounded-lg hover:border-slate-500 transition-colors">
+                Descargar CV
+              </a>
             </div>
+          </div>
 
-            <div className="flex flex-col md:flex-row justify-center gap-[30px] md:gap-[80px] mt-[20px]">
-              <div>
-                <h4 className="text-[40px] font-bold mb-[4px]">2+</h4>
-                <p className="text-[#888] text-[14px]">Años de Experiencia</p>
+          <div className="relative flex justify-center items-center flex-1 w-full max-w-lg mx-auto group">
+
+            <div className="absolute inset-0 bg-blue-500/10 blur-[50px] rounded-full group-hover:bg-blue-500/20 transition-all duration-500 pointer-events-none"></div>
+
+            <div className="relative bg-[#0b101c] border border-slate-800 rounded-3xl p-3 shadow-2xl overflow-hidden transition-all duration-500 group-hover:border-blue-500/40 hover:-translate-y-1">
+
+              <div className="flex justify-between items-center px-4 py-2 border-b border-slate-800/60 mb-3 text-[10px] font-mono tracking-widest text-slate-500">
+                <span className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                  CM_SYS.EXE
+                </span>
+                <span>SYS_READY // B2</span>
               </div>
-              <div>
-                <h4 className="text-[40px] font-bold mb-[4px]">10+</h4>
-                <p className="text-[#888] text-[14px]">Proyectos Creados</p>
+
+              <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-[#080d1a]">
+                <img
+                  src="img/ImgAnimadaPersonal.jpg"
+                  alt="Carlos Merino - Desarrollador de Software Jr."
+                  className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050b14]/40 to-transparent pointer-events-none"></div>
               </div>
-              <div>
-                <h4 className="text-[40px] font-bold mb-[4px]">100%</h4>
-                <p className="text-[#888] text-[14px]">Compromiso</p>
+
+              <div className="flex justify-between items-center px-4 pt-3 text-[9px] font-mono text-slate-500">
+                <span>LATAM // ESA +503</span>
+                <span>0x889F_ACTIVE</span>
               </div>
+
             </div>
-          </section>
+          </div>
+        </section>
 
-          <Certificaciones />
+        <section className="w-full bg-[#0e1629] border border-slate-800 rounded-2xl p-8 mb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-slate-800 shadow-lg">
+          <div className="flex flex-col items-start lg:px-8 first:pl-0">
+            <span className="text-[10px] text-slate-500 font-mono mb-2">01</span>
+            <h4 className="text-3xl font-bold text-white mb-1">2+ Años</h4>
+            <p className="text-xs text-slate-400">Trayectoria en TI y Dev</p>
+          </div>
+          <div className="flex flex-col items-start lg:px-8 pt-6 lg:pt-0">
+            <span className="text-[10px] text-slate-500 font-mono mb-2">02</span>
+            <h4 className="text-3xl font-bold text-white mb-1">ERPs / CRMs</h4>
+            <p className="text-xs text-slate-400">Experiencia corporativa</p>
+          </div>
+          <div className="flex flex-col items-start lg:px-8 pt-6 lg:pt-0">
+            <span className="text-[10px] text-slate-500 font-mono mb-2">03</span>
+            <h4 className="text-3xl font-bold text-white mb-1">Full Stack</h4>
+            <p className="text-xs text-slate-400">Despliegue end-to-end</p>
+          </div>
+          <div className="flex flex-col items-start lg:px-8 pt-6 lg:pt-0">
+            <span className="text-[10px] text-slate-500 font-mono mb-2">04</span>
+            <h4 className="text-3xl font-bold text-white mb-1">B2 (Avanzado)</h4>
+            <p className="text-xs text-slate-400">Nivel de Idioma Inglés</p>
+          </div>
+        </section>
 
-          <section id="skills" className="py-[80px] flex flex-col items-center text-center">
-            <h2 className="text-[32px] font-semibold mb-[8px]">Habilidades</h2>
-            <p className="text-[#888] text-[14px] mb-[50px]">Herramientas y tecnologías que domino</p>
+        <CarruselProyectos />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] w-full">
-              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
-                <h3 className="text-[18px] mb-[16px] font-semibold">Core Skills</h3>
-                <div className="flex flex-wrap gap-[10px]">
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Arquitectura Web</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Resolución de Problemas</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Soporte Técnico</span>
-                </div>
-              </div>
-
-              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
-                <h3 className="text-[18px] mb-[16px] font-semibold">Frontend</h3>
-                <div className="flex flex-wrap gap-[10px]">
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">HTML & CSS</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">JavaScript</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">React.js</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Tailwind CSS</span>
-                </div>
-              </div>
-
-              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
-                <h3 className="text-[18px] mb-[16px] font-semibold">Backend & BD</h3>
-                <div className="flex flex-wrap gap-[10px]">
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">PHP & Laravel</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Node.js</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">MySQL</span>
-                </div>
-              </div>
-
-              <div className="bg-[#111] border border-[#1a1a1a] rounded-[16px] p-[30px_24px] text-left flex flex-col">
-                <h3 className="text-[18px] mb-[16px] font-semibold">Herramientas</h3>
-                <div className="flex flex-wrap gap-[10px]">
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Git / GitHub</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Linux</span>
-                  <span className="bg-transparent border border-[#2a2a2a] text-[#aaa] py-[6px] px-[16px] rounded-full text-[12px]">Docker</span>
-                </div>
-              </div>
+        <section id="skills" className="py-24 border-t border-slate-800/50">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <div className="max-w-xl">
+              <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest mb-3 block">Stack Técnico</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Herramientas probadas para proyectos en producción.</h2>
             </div>
-          </section>
-        </main>
-      </div>
+            <a href="https://github.com/Cyberking23" className="text-sm text-blue-400 hover:text-white transition-colors flex items-center gap-2">
+              Ver perfil en GitHub <span className="text-lg">→</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                num: "01", title: "Front-End", desc: "Creación de interfaces modernas y componentes responsivos estructurados.",
+                techs: ["HTML5 & CSS3", "JavaScript", "React Js", "Tailwind CSS"]
+              },
+              {
+                num: "02", title: "Back-End", desc: "Lógica de servidores, creación de APIs y despliegue de módulos ERP.",
+                techs: ["PHP / Laravel", "Node.js / Express", "Python", "Lógica Algorítmica"]
+              },
+              {
+                num: "03", title: "Bases de Datos", desc: "Administración, persistencia e integridad de datos en servidores en vivo.",
+                techs: ["MySQL", "NoSQL", "Diseño Relacional", "Optimización SQL"]
+              },
+              {
+                num: "04", title: "Herramientas", desc: "Control de versiones, pruebas de API y entornos aislados de desarrollo.",
+                techs: ["Git / GitHub", "Docker", "Postman", "Soporte Técnico"]
+              }
+            ].map((cat, idx) => (
+              <div key={idx} className="bg-[#0e1629] border border-slate-800 rounded-2xl p-6 flex flex-col hover:border-blue-500/30 transition-colors">
+                <span className="text-right text-[10px] font-mono text-slate-600 block mb-4">{cat.num}</span>
+                <div className="w-10 h-10 rounded-lg bg-[#15203b] border border-slate-700 flex items-center justify-center mb-6">
+                  <span className="text-blue-400">❖</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{cat.title}</h3>
+                <p className="text-slate-400 text-sm mb-8 leading-relaxed flex-grow">{cat.desc}</p>
+
+                <div className="space-y-2 border-t border-slate-800 pt-4">
+                  {cat.techs.map((tech, tIdx) => (
+                    <div key={tIdx} className="flex justify-between items-center text-xs">
+                      <span className="text-slate-300 font-medium">{tech}</span>
+                      <span className="text-slate-600">→</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <Certificaciones />
+
+        <footer className="py-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 mt-12">
+          <div className="font-bold text-white text-sm tracking-wide flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+            Carlos Merino
+          </div>
+          <div className="text-slate-500 text-xs text-center md:text-right">
+            © 2026 Carlos Merino. Tecnico en Ingeniería en Ciencias de la Computación.
+          </div>
+        </footer>
+
+      </main>
     </div>
   );
 };
