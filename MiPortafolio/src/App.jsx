@@ -16,9 +16,16 @@ const App = () => {
             <a href="#projects" className="hover:text-white transition-colors">Proyectos</a>
             <a href="#skills" className="hover:text-white transition-colors">Stack Técnico</a>
           </div>
-          <a href="mailto:merinoventura123@gmail.com" className="bg-white text-black font-semibold text-[13px] px-5 py-2 rounded-full hover:bg-slate-200 transition-colors flex items-center gap-2">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=merinoventura123@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black font-semibold text-[13px] px-5 py-2 rounded-full hover:bg-slate-200 transition-colors flex items-center gap-2"
+          >
             Contactar <span className="text-lg leading-none">→</span>
           </a>
+
+
         </nav>
       </div>
 
@@ -39,7 +46,12 @@ const App = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
-              <a href="mailto:merinoventura123@gmail.com" className="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-500 transition-colors flex items-center gap-2">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=merinoventura123@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-500 transition-colors flex items-center gap-2"
+              >
                 Trabajemos juntos <span className="text-xl leading-none">→</span>
               </a>
               <a href="/Docs/CV.pdf" download className="bg-[#0e1629] border border-slate-700 text-white font-medium px-6 py-3 rounded-lg hover:border-slate-500 transition-colors">
