@@ -136,7 +136,7 @@ const App = () => {
               },
               {
                 num: "02", title: "Back-End", desc: "Lógica de servidores, creación de APIs y despliegue de módulos ERP.",
-                techs: ["PHP / Laravel", "Node.js / Express", "Python", "Lógica Algorítmica"]
+                techs: ["PHP / Laravel", "Node.js / Express", "Python","Java", "Lógica Algorítmica"]
               },
               {
                 num: "03", title: "Bases de Datos", desc: "Administración, persistencia e integridad de datos en servidores en vivo.",
