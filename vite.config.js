@@ -1,17 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite' 
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(), 
+    tailwindcss(),
   ],
-  server: {
-    host: true,
-    port: 5173,
-    watch: {
-      usePolling: true,
-    },
-  },
+  base: '/PortafolioPersonal/',
+  build: {
+    outDir: 'docs',
+  }
 })
