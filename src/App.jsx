@@ -144,7 +144,7 @@ const App = () => {
               },
               {
                 num: "04", title: "Herramientas", desc: "Control de versiones, pruebas de API y entornos aislados de desarrollo.",
-                techs: ["Git / GitHub", "Docker", "Postman", "Soporte Técnico"]
+                techs: ["Git / GitHub", "Docker", "Postman", "Soporte Técnico","Linux / Windows Server"]
               }
             ].map((cat, idx) => (
               <div key={idx} className="bg-[#0e1629] border border-slate-800 rounded-2xl p-6 flex flex-col hover:border-blue-500/30 transition-colors">
