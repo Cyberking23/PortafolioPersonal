@@ -4,14 +4,14 @@ export function CarruselProyectos() {
       titulo: "Clon de Disney+",
       desc: "Réplica de la interfaz web de Disney+. Incluye catálogos dinámicos, previsualización de videos interactivos por franquicia y un diseño totalmente responsivo fiel a la plataforma original.",
       tags: ["React.js", "Vite", "JavaScript", "CSS"],
-      img: "/img/PreviewImgDisneyClone.png",
+      img: "img/PreviewImgDisneyClone.png",
       link: "https://cyberking23.github.io/React-DisneyClone/"
     },
     {
       titulo: "Clon de Spotify",
       desc: "Réplica de la interfaz web de Spotify. Incluye reproducción de música, listas de reproducción y un diseño moderno y responsivo.",
       tags: ["React.js", "Vite", "JavaScript", "CSS"],
-      img: "/img/PreviewImgSpotifyClone.png",
+      img: "img/PreviewImgSpotifyClone.png",
       link: "https://cyberking23.github.io/React-SpotifyClone/"
     }
 

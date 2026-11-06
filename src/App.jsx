@@ -54,7 +54,7 @@ const App = () => {
               >
                 Trabajemos juntos <span className="text-xl leading-none"></span>
               </a>
-              <a href="/Docs/CV.pdf" download className="bg-[#0e1629] border border-slate-700 text-white font-medium px-6 py-3 rounded-lg hover:border-slate-500 transition-colors">
+              <a href="Docs/CV.pdf" download className="bg-[#0e1629] border border-slate-700 text-white font-medium px-6 py-3 rounded-lg hover:border-slate-500 transition-colors">
                 Descargar CV
               </a>
             </div>

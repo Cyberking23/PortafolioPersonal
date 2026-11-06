@@ -5,22 +5,22 @@ export function Certificaciones() {
 
     const slides = [
         [
-            { titulo: "Técnico en Redes de Datos", institucion: "Fundación Carlos Slim", fecha: "Junio 2025", link: "/Certificaciones/TecnicoEnRedesDeDatos.pdf", previewImg: "/Certificaciones/TecnicoEnRedesDeDatos.pdf" },
-            { titulo: "Desarrollador Backend", institucion: "Fundación Carlos Slim", fecha: "Junio 2024", link: "/Certificaciones/DesarolladorBackend.pdf", previewImg: "/Certificaciones/DesarolladorBackend.pdf" },
-            { titulo: "Fundamentos de Bases de Datos", institucion: "Platzi", fecha: "Diciembre 2024", link: "/Certificaciones/FundamentoBaseDeDatos.pdf", previewImg: "/Certificaciones/FundamentoBaseDeDatos.pdf" }
+            { titulo: "Técnico en Redes de Datos", institucion: "Fundación Carlos Slim", fecha: "Junio 2025", link: "Certificaciones/TecnicoEnRedesDeDatos.pdf", previewImg: "Certificaciones/TecnicoEnRedesDeDatos.pdf" },
+            { titulo: "Desarrollador Backend", institucion: "Fundación Carlos Slim", fecha: "Junio 2024", link: "Certificaciones/DesarolladorBackend.pdf", previewImg: "Certificaciones/DesarolladorBackend.pdf" },
+            { titulo: "Fundamentos de Bases de Datos", institucion: "Platzi", fecha: "Diciembre 2024", link: "Certificaciones/FundamentoBaseDeDatos.pdf", previewImg: "Certificaciones/FundamentoBaseDeDatos.pdf" }
         ],
         [
-            { titulo: "Desarrollador Frontend", institucion: "Fundación Carlos Slim", fecha: "Junio 2024", link: "/Certificaciones/DesarrolladorFrontEnd.pdf", previewImg: "/Certificaciones/DesarrolladorFrontEnd.pdf" },
-            { titulo: "Pensamiento Crítico para IA", institucion: "Platzi", fecha: "Mayo 2026", link: "/Certificaciones/PensamientoCriticoIA.pdf", previewImg: "/Certificaciones/PensamientoCriticoIA.pdf" },
-            { titulo: "Administrador de Servidores", institucion: "Fundación Carlos Slim", fecha: "2026", link: "/Certificaciones/AdministradorDeServidores.pdf", previewImg: "/Certificaciones/AdministradorDeServidores.pdf" }
+            { titulo: "Desarrollador Frontend", institucion: "Fundación Carlos Slim", fecha: "Junio 2024", link: "Certificaciones/DesarrolladorFrontEnd.pdf", previewImg: "Certificaciones/DesarrolladorFrontEnd.pdf" },
+            { titulo: "Pensamiento Crítico para IA", institucion: "Platzi", fecha: "Mayo 2026", link: "Certificaciones/PensamientoCriticoIA.pdf", previewImg: "Certificaciones/PensamientoCriticoIA.pdf" },
+            { titulo: "Administrador de Servidores", institucion: "Fundación Carlos Slim", fecha: "2026", link: "Certificaciones/AdministradorDeServidores.pdf", previewImg: "Certificaciones/AdministradorDeServidores.pdf" }
         ],
         [
-            { titulo: "Programación Orientada a Objetos", institucion: "Fundación Carlos Slim", fecha: "2026", link: "/Certificaciones/ProgramacionOrientadaAObjetos.pdf", previewImg: "/Certificaciones/ProgramacionOrientadaAObjetos.pdf" },
-            { titulo: "Curso de TypeScript", institucion: "Platzi", fecha: "2026", link: "/Certificaciones/Typescript.pdf", previewImg: "/Certificaciones/Typescript.pdf" },
-            { titulo: "Claude para Programadores", institucion: "Platzi", fecha: "2026", link: "/Certificaciones/ClaudeParaProgramadores.pdf", previewImg: "/Certificaciones/ClaudeParaProgramadores.pdf" }
+            { titulo: "Programación Orientada a Objetos", institucion: "Fundación Carlos Slim", fecha: "2026", link: "Certificaciones/ProgramacionOrientadaAObjetos.pdf", previewImg: "Certificaciones/ProgramacionOrientadaAObjetos.pdf" },
+            { titulo: "Curso de TypeScript", institucion: "Platzi", fecha: "2026", link: "Certificaciones/Typescript.pdf", previewImg: "Certificaciones/Typescript.pdf" },
+            { titulo: "Claude para Programadores", institucion: "Platzi", fecha: "2026", link: "Certificaciones/ClaudeParaProgramadores.pdf", previewImg: "Certificaciones/ClaudeParaProgramadores.pdf" }
         ],
         [
-            { titulo: "Fundamentos de Electrónica", institucion: "Platzi", fecha: "2026", link: "/Certificaciones/FundamentosElectronica.pdf", previewImg: "/Certificaciones/FundamentosElectronica.pdf" }
+            { titulo: "Fundamentos de Electrónica", institucion: "Platzi", fecha: "2026", link: "Certificaciones/FundamentosElectronica.pdf", previewImg: "Certificaciones/FundamentosElectronica.pdf" }
         ]
     ];
 
